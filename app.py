@@ -54,7 +54,7 @@ st.image("2.png")
 st.image("3.png")
 st.video("https://www.youtube.com/watch?v=SKeBZpjWTko")
 
-st.subheader("¡Ponlo en práctica!)
+st.subheader("¡Ponlo en práctica!")
 st.markdown("""
 Antes de empezar, asegúrate de que Streamlit tenga acceso a tu cámara. Te daremos algunas letras para que practique la posición de la mano. Identifica la letra que estamos pidiendo y posiciona tu mano a 15 cm de la cámara. Por favor, asegúrate de que solo se muestre tu mano, preferiblemente con un fondo blanco (puedes posicionar tu mano enfrente de una pared o de un pedazo de papel). Cuando estés listo, haz clic en “Tomar foto” y espera a tu resultado. Si hiciste la seña correctamente, se encenderá un LED de color verde y se escuchará un sonido indicando que lo has logrado. Si lo has hecho de manera incorrecta, aparecerá en pantalla la palabra “Incorrecto”. Puedes tomar la foto cuantas veces quieras y practicar múltiples veces.
 """)
