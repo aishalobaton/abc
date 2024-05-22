@@ -35,7 +35,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 st.title("Básico: el abecedario")
 st.header("¡Aprende lenguaje de señas colombiano!")
 st.subheader("¿Por qué es importante aprender LSC?")
-st.markkdown("""
+st.markdown("""
 **Inclusión y Accesibilidad**: Aprender el LSC permite a las personas oyentes comunicarse con la comunidad sorda, promoviendo una sociedad más inclusiva y accesible. Esto reduce barreras de comunicación y facilita la integración de las personas sordas en diferentes ámbitos de la vida cotidiana, como la educación, el trabajo y los servicios públicos.
 **Derechos Humanos y Igualdad:** El conocimiento y uso del LSC apoya el cumplimiento de los derechos humanos, específicamente los derechos de las personas con discapacidad. Facilita el acceso a la información y servicios en igualdad de condiciones, como lo establece la Convención sobre los Derechos de las Personas con Discapacidad de la ONU.
 **Enriquecimiento Cultural:** El LSC es una parte integral de la cultura y la identidad de la comunidad sorda en Colombia. Aprender este lenguaje ayuda a valorar y preservar esta cultura, contribuyendo a la diversidad cultural del país.
