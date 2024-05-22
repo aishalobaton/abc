@@ -65,7 +65,7 @@ if img_file_buffer is not None:
         client1.publish("LengSenas", {'abc': 'A'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
-        st.header("Incorrecto")
+        st.text("Incorrecto")
 
 st.title("B")
 camera_input_key = f"camera_input_B"  
@@ -94,6 +94,8 @@ if img_file_buffer is not None:
         st.header('B')
         client1.publish("LengSenas", {'abc': 'B'}, qos=0, retain=False)
         time.sleep(0.2)
+    else: 
+        st.text("Incorrecto")
 
 st.title("C")
 camera_input_key = f"camera_input_C"  
@@ -122,7 +124,9 @@ if img_file_buffer is not None:
         st.header('C')
         client1.publish("LengSenas", {'abc': 'C'}, qos=0, retain=False)
         time.sleep(0.2)
-
+    else: 
+        st.text("Incorrecto")
+        
 st.title("D")
 camera_input_key = f"camera_input_D"  
 img_file_buffer = st.camera_input(f"Toma una Foto de D", key=camera_input_key)
@@ -150,6 +154,8 @@ if img_file_buffer is not None:
         st.header('D')
         client1.publish("LengSenas", {'abc': 'D'}, qos=0, retain=False)
         time.sleep(0.2)
+    else: 
+        st.text("Incorrecto")
 
 st.title("I")
 camera_input_key = f"camera_input_I"  
@@ -178,6 +184,8 @@ if img_file_buffer is not None:
         st.header('I')
         client1.publish("LengSenas", {'abc': 'I'}, qos=0, retain=False)
         time.sleep(0.2)
+    else: 
+        st.text("Incorrecto")
 
 st.title("K")
 camera_input_key = f"camera_input_K"  
@@ -206,6 +214,8 @@ if img_file_buffer is not None:
         st.header('K')
         client1.publish("LengSenas", {'abc': 'K'}, qos=0, retain=False)
         time.sleep(0.2)
+    else: 
+        st.text("Incorrecto")
 
 st.title("L")
 camera_input_key = f"camera_input_L"  
@@ -234,6 +244,8 @@ if img_file_buffer is not None:
         st.header('L')
         client1.publish("LengSenas", {'abc': 'L'}, qos=0, retain=False)
         time.sleep(0.2)
+    else: 
+        st.text("Incorrecto")
 
 st.title("N")
 camera_input_key = f"camera_input_N"  
@@ -262,6 +274,8 @@ if img_file_buffer is not None:
         st.header('N')
         client1.publish("LengSenas", {'abc': 'N'}, qos=0, retain=False)
         time.sleep(0.2)
+    else: 
+        st.text("Incorrecto")
 
 st.title("O")
 camera_input_key = f"camera_input_O"  
@@ -290,7 +304,8 @@ if img_file_buffer is not None:
         st.header('O')
         client1.publish("LengSenas", {'abc': 'O'}, qos=0, retain=False)
         time.sleep(0.2)
-
+    else: 
+        st.text("Incorrecto")
 
 
 
