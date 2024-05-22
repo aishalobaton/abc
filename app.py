@@ -122,7 +122,8 @@ if img_file_buffer is not None:
         time.sleep(0.2)
 
 st.title("D")
-img_file_buffer = st.camera_input("Toma una Foto")
+camera_input_key = f"camera_input_D"  
+img_file_buffer = st.camera_input(f"Toma una Foto de D", key=camera_input_key)
 
 if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
@@ -149,7 +150,8 @@ if img_file_buffer is not None:
         time.sleep(0.2)
 
 st.title("I")
-img_file_buffer = st.camera_input("Toma una Foto")
+camera_input_key = f"camera_input_I"  
+img_file_buffer = st.camera_input(f"Toma una Foto de I", key=camera_input_key)
 
 if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
@@ -176,7 +178,8 @@ if img_file_buffer is not None:
         time.sleep(0.2)
 
 st.title("K")
-img_file_buffer = st.camera_input("Toma una Foto")
+camera_input_key = f"camera_input_K"  
+img_file_buffer = st.camera_input(f"Toma una Foto de K", key=camera_input_key)
 
 if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
@@ -203,7 +206,8 @@ if img_file_buffer is not None:
         time.sleep(0.2)
 
 st.title("L")
-img_file_buffer = st.camera_input("Toma una Foto")
+camera_input_key = f"camera_input_L"  
+img_file_buffer = st.camera_input(f"Toma una Foto de L", key=camera_input_key)
 
 if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
@@ -230,7 +234,8 @@ if img_file_buffer is not None:
         time.sleep(0.2)
 
 st.title("N")
-img_file_buffer = st.camera_input("Toma una Foto")
+camera_input_key = f"camera_input_N"  
+img_file_buffer = st.camera_input(f"Toma una Foto de N", key=camera_input_key)
 
 if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
@@ -257,7 +262,8 @@ if img_file_buffer is not None:
         time.sleep(0.2)
 
 st.title("O")
-img_file_buffer = st.camera_input("Toma una Foto")
+camera_input_key = f"camera_input_O"  
+img_file_buffer = st.camera_input(f"Toma una Foto de O", key=camera_input_key)
 
 if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
