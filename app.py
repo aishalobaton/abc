@@ -36,9 +36,7 @@ st.title("Básico: el abecedario")
 st.header("¡Aprende lenguaje de señas colombiano!")
 st.subheader("¿Por qué es importante aprender LSC?")
 st.markdown("""
-Saber sobre el lenguaje de señas colombiano es crucial para fomentar una sociedad más inclusiva, accesible y respetuosa
-
-de los derechos de todos sus miembros, además de enriquecer culturalmente a la comunidad en general.
+Saber sobre el lenguaje de señas colombiano es crucial para fomentar una sociedad más inclusiva, accesible y respetuosa de los derechos de todos sus miembros, además de enriquecer culturalmente a la comunidad en general.
 """)
 
 st.title("A")
