@@ -84,11 +84,13 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0] > 0.3:
-        st.header('A')
+        st.header("A")
+        st.image("A.png")
         client1.publish("LengSenas", {'abc': 'A'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
         st.text("Incorrecto")
+        st.image("A.png")
 
 st.title("B")
 camera_input_key = f"camera_input_B"  
@@ -114,11 +116,13 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][1] > 0.3:
-        st.header('B')
+        st.header("B")
+        st.image("B.png")
         client1.publish("LengSenas", {'abc': 'B'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
         st.text("Incorrecto")
+        st.image("B.png")
 
 st.title("C")
 camera_input_key = f"camera_input_C"  
@@ -144,11 +148,13 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][2] > 0.3:
-        st.header('C')
+        st.header("C")
+        st.image("C.png")
         client1.publish("LengSenas", {'abc': 'C'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
         st.text("Incorrecto")
+        st.image("C.png")
         
 st.title("D")
 camera_input_key = f"camera_input_D"  
@@ -174,11 +180,13 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][3] > 0.3:
-        st.header('D')
+        st.header("D")
+        st.image("D.png")
         client1.publish("LengSenas", {'abc': 'D'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
         st.text("Incorrecto")
+        st.image("D.png")
 
 st.title("I")
 camera_input_key = f"camera_input_I"  
@@ -204,11 +212,13 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][4] > 0.3:
-        st.header('I')
+        st.header("I")
+        st.image("I.png")
         client1.publish("LengSenas", {'abc': 'I'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
         st.text("Incorrecto")
+        st.image("I.png")
 
 st.title("K")
 camera_input_key = f"camera_input_K"  
@@ -234,11 +244,13 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][5] > 0.3:
-        st.header('K')
+        st.header("K")
+        st.image("K.png")
         client1.publish("LengSenas", {'abc': 'K'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
         st.text("Incorrecto")
+        st.image("K.png")
 
 st.title("L")
 camera_input_key = f"camera_input_L"  
@@ -264,11 +276,13 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][6] > 0.3:
-        st.header('L')
+        st.header("L")
+        st.image("L.png")
         client1.publish("LengSenas", {'abc': 'L'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
         st.text("Incorrecto")
+        st.image("L.png")
 
 st.title("N")
 camera_input_key = f"camera_input_N"  
@@ -294,11 +308,13 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][7] > 0.3:
-        st.header('N')
+        st.header("N")
+        st.image("N.png")
         client1.publish("LengSenas", {'abc': 'N'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
         st.text("Incorrecto")
+        st.image("N.png")
 
 st.title("O")
 camera_input_key = f"camera_input_O"  
@@ -324,11 +340,13 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][8] > 0.3:
-        st.header('O')
+        st.header("O")
+        st.image("O.png")
         client1.publish("LengSenas", {'abc': 'O'}, qos=0, retain=False)
         time.sleep(0.2)
     else: 
         st.text("Incorrecto")
+        st.image("O.png")
 
 
 
