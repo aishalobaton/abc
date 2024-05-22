@@ -27,12 +27,8 @@ client1.connect(broker, port)
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-st.title("Básico: el abecedario")
-st.header("¡Aprende lenguaje de señas colombiano!")
-st.subheader("¿Por qué es importante aprender LSC?")
-st.markdown("""
-Saber sobre el lenguaje de señas colombiano es crucial para fomentar una sociedad más inclusiva, accesible y respetuosa de los derechos de todos sus miembros, además de enriquecer culturalmente a la comunidad en general.
-""")
+st.title("¡Aprende lenguaje de señas colombiano!")
+st.header("Básico: el abecedario")
 
 st.subheader("¿Qué aprenderás?")
 st.markdown("""
