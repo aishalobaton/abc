@@ -37,7 +37,10 @@ while True:
   letter = letters[current_letter_index]
   st.title(letter)
 
-  img_file_buffer = st.camera_input(f"Toma una Foto de {letter}")
+  # Generate a unique key for each camera_input instance
+  camera_input_key = f"camera_input_{letter}"  
+
+  img_file_buffer = st.camera_input(f"Toma una Foto de {letter}", key=camera_input_key)  
 
   if img_file_buffer is not None:
       # Preprocess image
@@ -58,6 +61,7 @@ while True:
 
           # Move to the next letter
           current_letter_index = (current_letter_index + 1) % len(letters)
+
 
 
 
