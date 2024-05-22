@@ -41,8 +41,8 @@ El Lenguaje de Señas Colombiano (LSC) está conformado por varios elementos y c
 """)
 
 st.image("1.png", width = 500)
-st.image("2.png")
-st.image("3.png")
+st.image("2.png", width = 500)
+st.image("3.png", width = 500)
 st.video("https://www.youtube.com/watch?v=SKeBZpjWTko")
 
 st.subheader("¡Ponlo en práctica!")
@@ -76,13 +76,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][0] > 0.4:
         st.header("A")
-        st.image("A.png")
+        st.image("A.png", width = 500)
         payload = json.dumps({'abc': 'A'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("A.png")
+        st.image("A.png", width = 500)
 
 st.title("B")
 camera_input_key = f"camera_input_B"
@@ -142,13 +142,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][2] > 0.4:
         st.header("C")
-        st.image("C.png")
+        st.image("C.png", width = 500)
         payload = json.dumps({'abc': 'C'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("C.png")
+        st.image("C.png", width = 500)
 
 st.title("D")
 camera_input_key = f"camera_input_D"
@@ -175,13 +175,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][3] > 0.4:
         st.header("D")
-        st.image("D.png")
+        st.image("D.png", width = 500)
         payload = json.dumps({'abc': 'D'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("D.png")
+        st.image("D.png", width = 500)
 
 st.title("I")
 camera_input_key = f"camera_input_I"
@@ -208,13 +208,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][4] > 0.3:
         st.header("I")
-        st.image("I.png")
+        st.image("I.png", width = 500)
         payload = json.dumps({'abc': 'I'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("I.png")
+        st.image("I.png", width = 500)
 
 st.title("K")
 camera_input_key = f"camera_input_K"
@@ -241,13 +241,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][5] > 0.4:
         st.header("K")
-        st.image("K.png")
+        st.image("K.png", width = 500)
         payload = json.dumps({'abc': 'K'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("K.png")
+        st.image("K.png", width = 500)
 
 st.title("L")
 camera_input_key = f"camera_input_L"
@@ -274,13 +274,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][6] > 0.4:
         st.header("L")
-        st.image("L.png")
+        st.image("L.png", width = 500)
         payload = json.dumps({'abc': 'L'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("L.png")
+        st.image("L.png", width = 500)
 
 st.title("N")
 camera_input_key = f"camera_input_N"
@@ -307,13 +307,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][7] > 0.3:
         st.header("N")
-        st.image("N.png")
+        st.image("N.png", width = 500)
         payload = json.dumps({'abc': 'N'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("N.png")
+        st.image("N.png", width = 500)
 
 st.title("O")
 camera_input_key = f"camera_input_O"
@@ -340,13 +340,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][8] > 0.4:
         st.header("O")
-        st.image("O.png")
+        st.image("O.png", width = 500)
         payload = json.dumps({'abc': 'O'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("O.png")
+        st.image("O.png", width = 500)
 
 
 
