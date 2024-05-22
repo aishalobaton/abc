@@ -40,14 +40,19 @@ Saber sobre el lenguaje de señas colombiano es crucial para fomentar una socied
 """)
 
 st.subheader("¿Qué aprenderás?")
-st.text("""
+st.markdown("""
 En esta sección te enseñaremos el abecedario de LSC por medio de un video e imágenes para que luego puedas replicarlar y poder practicar el nuevo conocimiento adquirido.
 """)
 
 st.subheader("El abecedario")
-st.text("""
+st.markdown("""
 El Lenguaje de Señas Colombiano (LSC) está conformado por varios elementos y características que lo hacen un sistema de comunicación completo y estructurado. La configuración de la mano (Quirémica) se refiere a las formas que adoptan las manos al realizar diferentes señas. Existen configuraciones básicas que se utilizan como base para formar las señas, y cada una tiene su propia estructura y posición de los dedos. La orientación puede variar hacia adelante, hacia atrás, hacia arriba, hacia abajo, hacia los lados, etc. Los movimientos pueden ser lineales, circulares, repetitivos, y pueden variar en velocidad e intensidad.
 """)
+
+st.image("1.png")
+st.image("2.png")
+st.image("3.png")
+st.video("https://www.youtube.com/watch?v=SKeBZpjWTko")
 
 st.title("A")
 
