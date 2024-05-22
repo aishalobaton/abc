@@ -40,7 +40,7 @@ st.markdown("""
 El Lenguaje de Señas Colombiano (LSC) está conformado por varios elementos y características que lo hacen un sistema de comunicación completo y estructurado. La configuración de la mano (Quirémica) se refiere a las formas que adoptan las manos al realizar diferentes señas. Existen configuraciones básicas que se utilizan como base para formar las señas, y cada una tiene su propia estructura y posición de los dedos. La orientación puede variar hacia adelante, hacia atrás, hacia arriba, hacia abajo, hacia los lados, etc. Los movimientos pueden ser lineales, circulares, repetitivos, y pueden variar en velocidad e intensidad.
 """)
 
-st.image("1.png", width = 700)
+st.image("1.png", width = 800)
 st.image("2.png")
 st.image("3.png")
 st.video("https://www.youtube.com/watch?v=SKeBZpjWTko")
