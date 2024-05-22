@@ -4,69 +4,284 @@ import json
 import streamlit as st
 import cv2
 import numpy as np
-from PIL import Image, ImageOps
+#from PIL import Image
+from PIL import Image as Image, ImageOps as ImagOps
 from keras.models import load_model
 
-def on_publish(client, userdata, result):
+def on_publish(client,userdata,result):             #create function for callback
     print("el dato ha sido publicado \n")
     pass
 
 def on_message(client, userdata, message):
     global message_received
     time.sleep(2)
-    message_received = str(message.payload.decode("utf-8"))
+    message_received=str(message.payload.decode("utf-8"))
     st.write(message_received)
 
-broker = "broker.mqttdashboard.com"
-port = 1883
-client1 = paho.Client("LengManos")
+        
+
+
+broker="broker.mqttdashboard.com"
+port=1883
+client1= paho.Client("LengManos")
 client1.on_message = on_message
 client1.on_publish = on_publish
-client1.connect(broker, port)
+client1.connect(broker,port)
 
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-letters = ['A', 'B', 'C', 'D', 'I', 'K', 'L', 'N', 'O']
-current_letter_index = 0
 
 st.title("Básico: abecedario")
 st.text("hola")
 
-while True:
-  letter = letters[current_letter_index]
-  st.title(letter)
 
-  # Generate a unique key for each camera_input instance
-  camera_input_key = f"camera_input_{letter}"  
+st.title("A")
 
-  img_file_buffer = st.camera_input(f"Toma una Foto de {letter}", key=camera_input_key)  
+camera_input_key = f"camera_input_A"  
+img_file_buffer = st.camera_input(f"Toma una Foto de A", key=camera_input_key)  
 
-  if img_file_buffer is not None:
-      # Preprocess image
-      img = Image.open(img_file_buffer)
-      newsize = (224, 224)
-      img = img.resize(newsize)
-      img_array = np.array(img)
-      normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
-      data[0] = normalized_image_array
+if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    # To read image file buffer as a PIL Image:
+    img = Image.open(img_file_buffer)
 
-      # Run inference
-      prediction = model.predict(data)
-      print(prediction)
-      if prediction[0][letters.index(letter)] > 0.3:
-          st.header(letter)
-          client1.publish("LengSenas", {'abc': letter}, qos=0, retain=False)
-          time.sleep(2)
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    # To convert PIL Image to numpy array:
+    img_array = np.array(img)
 
-          # Move to the next letter
-          current_letter_index = (current_letter_index + 1) % len(letters)
+    # Normalize the image
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    # Load the image into the array
+    data[0] = normalized_image_array
 
+    # Run the inference
+    prediction = model.predict(data)
+    print(prediction)
+    if prediction[0][0] > 0.3:
+        st.header('A')
+        client1.publish("LengSenas", {'abc': 'A'}, qos=0, retain=False)
+        time.sleep(0.2)
 
+st.title("B")
+camera_input_key = f"camera_input_B"  
+img_file_buffer = st.camera_input(f"Toma una Foto de B", key=camera_input_key)
 
+if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    # To read image file buffer as a PIL Image:
+    img = Image.open(img_file_buffer)
 
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    # To convert PIL Image to numpy array:
+    img_array = np.array(img)
 
+    # Normalize the image
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    # Load the image into the array
+    data[0] = normalized_image_array
 
+    # Run the inference
+    prediction = model.predict(data)
+    print(prediction)
+    if prediction[0][1] > 0.3:
+        st.header('B')
+        client1.publish("LengSenas", {'abc': 'B'}, qos=0, retain=False)
+        time.sleep(0.2)
+
+st.title("C")
+camera_input_key = f"camera_input_C"  
+img_file_buffer = st.camera_input(f"Toma una Foto de C", key=camera_input_key)
+
+if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    # To read image file buffer as a PIL Image:
+    img = Image.open(img_file_buffer)
+
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    # To convert PIL Image to numpy array:
+    img_array = np.array(img)
+
+    # Normalize the image
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    # Load the image into the array
+    data[0] = normalized_image_array
+
+    # Run the inference
+    prediction = model.predict(data)
+    print(prediction)
+    if prediction[0][2] > 0.3:
+        st.header('C')
+        client1.publish("LengSenas", {'abc': 'C'}, qos=0, retain=False)
+        time.sleep(0.2)
+
+st.title("D")
+img_file_buffer = st.camera_input("Toma una Foto")
+
+if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    # To read image file buffer as a PIL Image:
+    img = Image.open(img_file_buffer)
+
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    # To convert PIL Image to numpy array:
+    img_array = np.array(img)
+
+    # Normalize the image
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    # Load the image into the array
+    data[0] = normalized_image_array
+
+    # Run the inference
+    prediction = model.predict(data)
+    print(prediction)
+    if prediction[0][3] > 0.3:
+        st.header('D')
+        client1.publish("LengSenas", {'abc': 'D'}, qos=0, retain=False)
+        time.sleep(0.2)
+
+st.title("I")
+img_file_buffer = st.camera_input("Toma una Foto")
+
+if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    # To read image file buffer as a PIL Image:
+    img = Image.open(img_file_buffer)
+
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    # To convert PIL Image to numpy array:
+    img_array = np.array(img)
+
+    # Normalize the image
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    # Load the image into the array
+    data[0] = normalized_image_array
+
+    # Run the inference
+    prediction = model.predict(data)
+    print(prediction)
+    if prediction[0][4] > 0.3:
+        st.header('I')
+        client1.publish("LengSenas", {'abc': 'I'}, qos=0, retain=False)
+        time.sleep(0.2)
+
+st.title("K")
+img_file_buffer = st.camera_input("Toma una Foto")
+
+if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    # To read image file buffer as a PIL Image:
+    img = Image.open(img_file_buffer)
+
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    # To convert PIL Image to numpy array:
+    img_array = np.array(img)
+
+    # Normalize the image
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    # Load the image into the array
+    data[0] = normalized_image_array
+
+    # Run the inference
+    prediction = model.predict(data)
+    print(prediction)
+    if prediction[0][5] > 0.3:
+        st.header('K')
+        client1.publish("LengSenas", {'abc': 'K'}, qos=0, retain=False)
+        time.sleep(0.2)
+
+st.title("L")
+img_file_buffer = st.camera_input("Toma una Foto")
+
+if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    # To read image file buffer as a PIL Image:
+    img = Image.open(img_file_buffer)
+
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    # To convert PIL Image to numpy array:
+    img_array = np.array(img)
+
+    # Normalize the image
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    # Load the image into the array
+    data[0] = normalized_image_array
+
+    # Run the inference
+    prediction = model.predict(data)
+    print(prediction)
+    if prediction[0][6] > 0.3:
+        st.header('L')
+        client1.publish("LengSenas", {'abc': 'L'}, qos=0, retain=False)
+        time.sleep(0.2)
+
+st.title("N")
+img_file_buffer = st.camera_input("Toma una Foto")
+
+if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    # To read image file buffer as a PIL Image:
+    img = Image.open(img_file_buffer)
+
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    # To convert PIL Image to numpy array:
+    img_array = np.array(img)
+
+    # Normalize the image
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    # Load the image into the array
+    data[0] = normalized_image_array
+
+    # Run the inference
+    prediction = model.predict(data)
+    print(prediction)
+    if prediction[0][7] > 0.3:
+        st.header('N')
+        client1.publish("LengSenas", {'abc': 'N'}, qos=0, retain=False)
+        time.sleep(0.2)
+
+st.title("O")
+img_file_buffer = st.camera_input("Toma una Foto")
+
+if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    # To read image file buffer as a PIL Image:
+    img = Image.open(img_file_buffer)
+
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    # To convert PIL Image to numpy array:
+    img_array = np.array(img)
+
+    # Normalize the image
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    # Load the image into the array
+    data[0] = normalized_image_array
+
+    # Run the inference
+    prediction = model.predict(data)
+    print(prediction)
+    if prediction[0][8] > 0.3:
+        st.header('O')
+        client1.publish("LengSenas", {'abc': 'O'}, qos=0, retain=False)
+        time.sleep(0.2)
 
 
 
