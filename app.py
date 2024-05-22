@@ -309,7 +309,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][7] > 0.4:
+    if prediction[0][7] > 0.3:
         st.header("N")
         st.image("N.png")
         payload = json.dumps({'abc': 'N'})
