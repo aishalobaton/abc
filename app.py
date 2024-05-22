@@ -33,7 +33,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 
 st.title("Básico: abecedario")
-st.h1("hola")
+st.text("hola")
 
 
 st.title("A")
