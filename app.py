@@ -78,7 +78,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][0] > 0.3:
+    if prediction[0][0] > 0.4:
         st.header("A")
         st.image("A.png")
         payload = json.dumps({'abc': 'A'})
@@ -111,7 +111,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][1] > 0.3:
+    if prediction[0][1] > 0.4:
         st.header("B")
         st.image("B.png")
         payload = json.dumps({'abc': 'B'})
@@ -144,7 +144,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][2] > 0.3:
+    if prediction[0][2] > 0.4:
         st.header("C")
         st.image("C.png")
         payload = json.dumps({'abc': 'C'})
@@ -177,7 +177,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][3] > 0.3:
+    if prediction[0][3] > 0.4:
         st.header("D")
         st.image("D.png")
         payload = json.dumps({'abc': 'D'})
@@ -210,7 +210,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][4] > 0.3:
+    if prediction[0][4] > 0.4:
         st.header("I")
         st.image("I.png")
         payload = json.dumps({'abc': 'I'})
@@ -243,7 +243,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][5] > 0.3:
+    if prediction[0][5] > 0.4:
         st.header("K")
         st.image("K.png")
         payload = json.dumps({'abc': 'K'})
@@ -276,7 +276,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][6] > 0.3:
+    if prediction[0][6] > 0.4:
         st.header("L")
         st.image("L.png")
         payload = json.dumps({'abc': 'L'})
@@ -309,7 +309,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][7] > 0.3:
+    if prediction[0][7] > 0.4:
         st.header("N")
         st.image("N.png")
         payload = json.dumps({'abc': 'N'})
@@ -342,7 +342,7 @@ if img_file_buffer is not None:
     # Run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][8] > 0.3:
+    if prediction[0][8] > 0.4:
         st.header("O")
         st.image("O.png")
         payload = json.dumps({'abc': 'O'})
