@@ -37,11 +37,17 @@ st.header("¡Aprende lenguaje de señas colombiano!")
 st.subheader("¿Por qué es importante aprender LSC?")
 st.markdown("""
 **Inclusión y Accesibilidad**: Aprender el LSC permite a las personas oyentes comunicarse con la comunidad sorda, promoviendo una sociedad más inclusiva y accesible. Esto reduce barreras de comunicación y facilita la integración de las personas sordas en diferentes ámbitos de la vida cotidiana, como la educación, el trabajo y los servicios públicos.
+
 **Derechos Humanos y Igualdad:** El conocimiento y uso del LSC apoya el cumplimiento de los derechos humanos, específicamente los derechos de las personas con discapacidad. Facilita el acceso a la información y servicios en igualdad de condiciones, como lo establece la Convención sobre los Derechos de las Personas con Discapacidad de la ONU.
+
 **Enriquecimiento Cultural:** El LSC es una parte integral de la cultura y la identidad de la comunidad sorda en Colombia. Aprender este lenguaje ayuda a valorar y preservar esta cultura, contribuyendo a la diversidad cultural del país.
+
 **Educación Inclusiva:** En el ámbito educativo, la enseñanza y el uso del LSC permiten que los estudiantes sordos accedan a la educación en condiciones equitativas. Los educadores que conocen LSC pueden ofrecer una mejor experiencia educativa y adaptar sus métodos de enseñanza para incluir a todos los estudiantes.
+
 **Comunicación y Relaciones Personales:** Saber LSC facilita la comunicación con familiares, amigos o colegas que son sordos, fortaleciendo las relaciones personales y profesionales. Esto también puede mejorar la empatía y la comprensión hacia las experiencias de las personas sordas.
+
 **Oportunidades Profesionales:** El conocimiento del LSC puede abrir oportunidades laborales en áreas como la interpretación, la enseñanza de personas sordas, el trabajo social y la salud, donde la habilidad de comunicarse en LSC es un activo valioso.
+
 **Promoción de la Diversidad Lingüística:** El LSC es un idioma con su propia gramática y estructura, diferente del español hablado. Conocerlo promueve la diversidad lingüística y reconoce el valor de los diferentes modos de comunicación.
 """)
 
