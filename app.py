@@ -4,28 +4,33 @@ import json
 import streamlit as st
 import cv2
 import numpy as np
-from PIL import Image
+#from PIL import Image
+from PIL import Image as Image, ImageOps as ImagOps
+from keras.models import load_model
 
-def on_publish(client, userdata, result):  # Create function for callback
+def on_publish(client,userdata,result):             #create function for callback
     print("el dato ha sido publicado \n")
     pass
 
 def on_message(client, userdata, message):
     global message_received
     time.sleep(2)
-    message_received = str(message.payload.decode("utf-8"))
+    message_received=str(message.payload.decode("utf-8"))
     st.write(message_received)
 
+        
 
-broker = "broker.mqttdashboard.com"
-port = 1883
-client1 = paho.Client("LengManos")
+
+broker="broker.mqttdashboard.com"
+port=1883
+client1= paho.Client("LengManos")
 client1.on_message = on_message
 client1.on_publish = on_publish
-client1.connect(broker, port)
+client1.connect(broker,port)
 
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+
 
 st.title("Básico: abecedario")
 st.h1("hola")
