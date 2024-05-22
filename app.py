@@ -17,7 +17,6 @@ def on_message(client, userdata, message):
     message_received = str(message.payload.decode("utf-8"))
     st.write(message_received)
 
-
 broker = "broker.mqttdashboard.com"
 port = 1883
 client1 = paho.Client("LengManos")
@@ -28,15 +27,17 @@ client1.connect(broker, port)
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-
 letters = ['A', 'B', 'C', 'D', 'I', 'K', 'L', 'N', 'O']
+current_letter_index = 0
 
 st.title("Básico: abecedario")
 st.text("hola")
 
-for letter in letters:
+while True:
+  letter = letters[current_letter_index]
   st.title(letter)
-  img_file_buffer = st.camera_input("Toma una Foto")
+
+  img_file_buffer = st.camera_input(f"Toma una Foto de {letter}")
 
   if img_file_buffer is not None:
       # Preprocess image
@@ -53,7 +54,11 @@ for letter in letters:
       if prediction[0][letters.index(letter)] > 0.3:
           st.header(letter)
           client1.publish("LengSenas", {'abc': letter}, qos=0, retain=False)
-          time.sleep(0.2)
+          time.sleep(2)
+
+          # Move to the next letter
+          current_letter_index = (current_letter_index + 1) % len(letters)
+
 
 
 
