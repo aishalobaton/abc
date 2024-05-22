@@ -64,6 +64,8 @@ if img_file_buffer is not None:
         st.header('A')
         client1.publish("LengSenas", {'abc': 'A'}, qos=0, retain=False)
         time.sleep(0.2)
+        else 
+        st.header("Incorrecto")
 
 st.title("B")
 camera_input_key = f"camera_input_B"  
