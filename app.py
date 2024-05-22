@@ -58,16 +58,51 @@ if img_file_buffer is not None:
       st.header('A')
       client1.publish("LengSenas","{'abc': 'A'}",qos=0, retain=False)
       time.sleep(0.2)
-   if prediction[0][0]>0.3:
+   if prediction[0][1]>0.3:
       st.header('B')
       client1.publish("LengSenas","{'abc': 'B'}",qos=0, retain=False)
       time.sleep(0.2)
-   if prediction[0][0]>0.3:
+   if prediction[0][2]>0.3:
       st.header('c')
       client1.publish("LengSenas","{'abc': 'C'}",qos=0, retain=False)
       time.sleep(0.2)
-   if prediction[0][0]>0.3:
+   if prediction[0][3]>0.3:
       st.header('D')
       client1.publish("LengSenas","{'abc': 'D'}",qos=0, retain=False)
       time.sleep(0.2)
-       
+   if prediction[0][4]>0.3:
+      st.header('I')
+      client1.publish("LengSenas","{'abc': 'I'}",qos=0, retain=False)
+      time.sleep(0.2)
+   if prediction[0][5]>0.3:
+      st.header('K')
+      client1.publish("LengSenas","{'abc': 'K'}",qos=0, retain=False)
+      time.sleep(0.2)
+   if prediction[0][6]>0.3:
+      st.header('L')
+      client1.publish("LengSenas","{'abc': 'L'}",qos=0, retain=False)
+      time.sleep(0.2)
+   if prediction[0][7]>0.3:
+      st.header('N')
+      client1.publish("LengSenas","{'abc': 'N'}",qos=0, retain=False)
+      time.sleep(0.2)
+   if prediction[0][8]>0.3:
+      st.header('O')
+      client1.publish("LengSenas","{'abc': 'O'}",qos=0, retain=False)
+      time.sleep(0.2)
+   #if prediction[0][0]>0.3:
+      #st.header('R')
+      #client1.publish("LengSenas","{'abc': 'R'}",qos=0, retain=False)
+      #time.sleep(0.2)
+   #if prediction[0][0]>0.3:
+      #st.header('U')
+      #client1.publish("LengSenas","{'abc': 'U'}",qos=0, retain=False)
+      #time.sleep(0.2)
+   #if prediction[0][0]>0.3:
+      #st.header('V')
+      #client1.publish("LengSenas","{'abc': 'V'}",qos=0, retain=False)
+      #time.sleep(0.2)
+   #if prediction[0][0]>0.3:
+      #st.header('Y')
+      #client1.publish("LengSenas","{'abc': 'Y'}",qos=0, retain=False)
+      #time.sleep(0.2)
